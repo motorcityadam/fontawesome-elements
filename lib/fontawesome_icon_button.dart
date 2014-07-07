@@ -11,15 +11,15 @@ import 'package:fontawesome_elements/src/common.dart' show DomProxyMixin;
 
 /// `core-icon-button` includes the Font Awesome iconset.  Use `icon` to specify which icon from the icon set to use.
 ///
-///     <core-icon-button icon="bookmark"></core-icon-button>
+///     <core-icon-button glyph="fa-bookmark"></core-icon-button>
 ///
 /// See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for the available icons.
 class FontawesomeIconButton extends HtmlElement with DomProxyMixin {
   FontawesomeIconButton.created() : super.created();
 
-  /// Specifies the icon name of the Font Awesome icon.
-  String get icon => jsElement['icon'];
-  set icon(String value) { jsElement['icon'] = value; }
+  /// Specifies the icon (glyph) name of the Font Awesome icon.
+  String get glyph => jsElement['glyph'];
+  set glyph(String value) { jsElement['glyph'] = value; }
 
   /// Specifies the size of the icon in em units.
   String get size => jsElement['size'];

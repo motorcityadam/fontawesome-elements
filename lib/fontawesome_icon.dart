@@ -14,11 +14,11 @@ import 'package:fontawesome_elements/src/common.dart' show DomProxyMixin;
 ///
 /// Example using `fa-car` icon from Font Awesome iconset:
 ///
-///     <fontawesome-icon icon="fa-car"></fontawesome-icon>
+///     <fontawesome-icon glyph="fa-car"></fontawesome-icon>
 ///
 /// Example using `fa-building` icon from Font Awesome iconset with a size of 16em:
 ///
-///     <fontawesome-icon icon="fa-building" size="16"></fontawesome-icon>
+///     <fontawesome-icon glyph="fa-building" size="16"></fontawesome-icon>
 ///
 /// See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for the available icons.
 class FontawesomeIcon extends HtmlElement with DomProxyMixin {
@@ -28,9 +28,9 @@ class FontawesomeIcon extends HtmlElement with DomProxyMixin {
   String get size => jsElement['size'];
   set size(String value) { jsElement['size'] = value; }
 
-  /// Specifies the icon name of the Font Awesome icon.
-  String get icon => jsElement['icon'];
-  set icon(String value) { jsElement['icon'] = value; }
+  /// Specifies the icon (glyph) name of the Font Awesome icon.
+  String get glyph => jsElement['glyph'];
+  set glyph(String value) { jsElement['glyph'] = value; }
 }
 @initMethod
 upgradeFontawesomeIcon() => registerDartType('fontawesome-icon', FontawesomeIcon);

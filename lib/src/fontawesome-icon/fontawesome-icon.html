@@ -10,11 +10,11 @@ By default, an icon renders as 1em from the base font size (in pixels).
 
 Example using `fa-car` icon from Font Awesome iconset:
 
-    <fontawesome-icon icon="fa-car"></fontawesome-icon>
+    <fontawesome-icon glyph="fa-car"></fontawesome-icon>
 
 Example using `fa-building` icon from Font Awesome iconset with a size of 16em:
 
-    <fontawesome-icon icon="fa-building" size="16"></fontawesome-icon>
+    <fontawesome-icon glyph="fa-building" size="16"></fontawesome-icon>
 
 See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for the available icons.
 
@@ -33,10 +33,10 @@ See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for th
   }
 </style>
 
-<polymer-element name="fontawesome-icon" attributes="size icon">
+<polymer-element name="fontawesome-icon" attributes="size glyph">
   <template>
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-    <i class="fa {{icon}}" style="font-size: {{size}}em;"></i><content></content>
+    <i class="fa {{glyph}}" style="font-size: {{size}}em;"></i><content></content>
   </template>
   <script>
     (function() {
@@ -53,16 +53,16 @@ See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for th
         size: 1,
 
         /**
-         * Specifies the icon name of the Font Awesome icon.
+         * Specifies the icon (glyph) name of the Font Awesome icon.
          *
-         * @attribute icon
+         * @attribute glyph
          * @type string
          * @default ''
          */
-        icon: '',
+        glyph: '',
 
         observe: {
-          'size icon': 'updateIcon'
+          'size glyph': 'updateIcon'
         },
 
         ready: function() {

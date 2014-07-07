@@ -6,7 +6,7 @@ The complete set of contributors may be found at http://adamjcook.github.io/font
 <!--
 `core-icon-button` includes the Font Awesome iconset.  Use `icon` to specify which icon from the icon set to use.
 
-    <core-icon-button icon="bookmark"></core-icon-button>
+    <core-icon-button glyph="fa-bookmark"></core-icon-button>
 
 See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for the available icons.
 
@@ -17,10 +17,10 @@ See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for th
 
 <link rel="import" href="../fontawesome-icon/fontawesome-icon.html">
 
-<polymer-element name="fontawesome-icon-button" attributes="icon size active">
+<polymer-element name="fontawesome-icon-button" attributes="glyph size active">
   <template>
     <link rel="stylesheet" href="fontawesome-icon-button.css">
-    <fontawesome-icon icon="{{icon}}" size="{{size}}"><content></content></fontawesome-icon>
+    <fontawesome-icon glyph="{{glyph}}" size="{{size}}"><content></content></fontawesome-icon>
   </template>
   <script>
 
@@ -45,13 +45,13 @@ See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for th
       size: 1,
 
       /**
-       * Specifies the icon name of the Font Awesome icon.
+       * Specifies the icon (glyph) name of the Font Awesome icon.
        *
-       * @attribute icon
+       * @attribute glyph
        * @type string
        * @default ''
        */
-      icon: '',
+      glyph: '',
 
       activeChanged: function() {
         this.classList.toggle('selected', this.active);
