@@ -23,7 +23,7 @@ fontawesome_elements provides the following for Dart developers:
 ## Status
 
 This is a beta release of this package, but for most applications, it should be production-ready given the
-primarily visual nature of these elements. API changes are very possible while this package is in beta.
+primarily visual nature of these elements. However, API changes are very possible while this package is in beta.
 
 ## Using Elements
 

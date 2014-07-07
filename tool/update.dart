@@ -11,9 +11,6 @@ import 'package:path/path.dart' as path;
 import 'package:fontawesome_elements/generate_dart_api.dart' as generator;
 
 main(args) {
-  // TODO(sigmund): find out if we can use a bower override for this.
-//  new File(path.join('../', 'lib', 'src', 'polymer', 'polymer.html'))
-//  .writeAsStringSync(_POLYMER_HTML_FORWARD);
   generator.main(args);
 }
 
