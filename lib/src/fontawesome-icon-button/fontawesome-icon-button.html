@@ -1,0 +1,65 @@
+<!--
+Copyright (c) 2014 Adam Joseph Cook. All rights reserved.
+This code may only be used under The MIT License found at http://adamjcook.github.io/fontawesome-elements/LICENSE
+The complete set of contributors may be found at http://adamjcook.github.io/fontawesome-elements/CONTRIBUTORS
+-->
+<!--
+`core-icon-button` includes the Font Awesome iconset.  Use `icon` to specify which icon from the icon set to use.
+
+    <core-icon-button icon="bookmark"></core-icon-button>
+
+See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for the available icons.
+
+@group Font Awesome Elements
+@element fontawesome-icon-button
+@homepage adamjcook.github.io/fontawesome-elements
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../fontawesome-icon/fontawesome-icon.html">
+
+<polymer-element name="fontawesome-icon-button" attributes="icon size active">
+  <template>
+    <link rel="stylesheet" href="fontawesome-icon-button.css">
+    <fontawesome-icon icon="{{icon}}" size="{{size}}"><content></content></fontawesome-icon>
+  </template>
+  <script>
+
+    Polymer('fontawesome-icon-button', {
+
+      /**
+       * If true, border is placed around the button to indicate it is in a active state.
+       *
+       * @attribute active
+       * @type boolean
+       * @default false
+       */
+      active: false,
+
+      /**
+       * Specifies the size of the icon in em units.
+       *
+       * @attribute size
+       * @type string
+       * @default 1
+       */
+      size: 1,
+
+      /**
+       * Specifies the icon name of the Font Awesome icon.
+       *
+       * @attribute icon
+       * @type string
+       * @default ''
+       */
+      icon: '',
+
+      activeChanged: function() {
+        this.classList.toggle('selected', this.active);
+      }
+
+    });
+
+  </script>
+
+</polymer-element>

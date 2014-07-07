@@ -1,0 +1,42 @@
+<!doctype html>
+<!--
+Copyright (c) 2014 Adam Joseph Cook. All rights reserved.
+This code may only be used under The MIT License found at http://adamjcook.github.io/fontawesome-elements/LICENSE
+The complete set of contributors may be found at http://adamjcook.github.io/fontawesome-elements/CONTRIBUTORS
+-->
+<html>
+<head>
+  <title>fontawesome-icon-button</title>
+  <script src="../platform/platform.js"></script>
+  <link rel="import" href="fontawesome-icon-button.html">
+  <style>
+    body {
+      background-color: #eee;
+      font-size: 14px;
+    }
+    .icon-label {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body unresolved>
+
+<template is="auto-binding">
+  <div wrap horizontal layout>
+    <fontawesome-icon-button icon="fa-building">
+      <span class="icon-label">
+        Climb Building!
+      </span>
+    </fontawesome-icon-button>
+  </div>
+  <div wrap horizontal layout>
+    <fontawesome-icon-button icon="fa-building" size="2">
+        <span class="icon-label">
+          Climb Building!
+        </span>
+    </fontawesome-icon-button>
+  </div>
+</template>
+
+</body>
+</html>

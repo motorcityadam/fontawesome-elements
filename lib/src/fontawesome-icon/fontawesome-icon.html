@@ -1,0 +1,81 @@
+<!--
+Copyright (c) 2014 Adam Joseph Cook. All rights reserved.
+This code may only be used under The MIT License found at http://adamjcook.github.io/fontawesome-elements/LICENSE
+The complete set of contributors may be found at http://adamjcook.github.io/fontawesome-elements/CONTRIBUTORS
+-->
+<!--
+
+The `fontawesome-icon` element displays an icon using Font Awesome's icon font.
+By default, an icon renders as 1em from the base font size (in pixels).
+
+Example using `fa-car` icon from Font Awesome iconset:
+
+    <fontawesome-icon icon="fa-car"></fontawesome-icon>
+
+Example using `fa-building` icon from Font Awesome iconset with a size of 16em:
+
+    <fontawesome-icon icon="fa-building" size="16"></fontawesome-icon>
+
+See [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons) for the available icons.
+
+@group Font Awesome Elements
+@element fontawesome-icon
+@homepage adamjcook.github.io/fontawesome-elements
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+
+<style>
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url('../font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0');
+    src: url('../font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+</style>
+
+<polymer-element name="fontawesome-icon" attributes="size icon">
+  <template>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <i class="fa {{icon}}" style="font-size: {{size}}em;"></i><content></content>
+  </template>
+  <script>
+    (function() {
+
+      Polymer('fontawesome-icon', {
+
+        /**
+         * Specifies the size of the icon in em units.
+         *
+         * @attribute size
+         * @type string
+         * @default 1
+         */
+        size: 1,
+
+        /**
+         * Specifies the icon name of the Font Awesome icon.
+         *
+         * @attribute icon
+         * @type string
+         * @default ''
+         */
+        icon: '',
+
+        observe: {
+          'size icon': 'updateIcon'
+        },
+
+        ready: function() {
+          this.updateIcon();
+        },
+
+        updateIcon: function() {}
+
+      });
+
+    })();
+  </script>
+
+</polymer-element>

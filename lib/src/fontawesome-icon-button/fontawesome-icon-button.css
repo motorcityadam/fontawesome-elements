@@ -1,0 +1,64 @@
+/*
+Copyright (c) 2014 Adam Joseph Cook. All rights reserved.
+This code may only be used under The MIT License found at http://adamjcook.github.io/fontawesome-elements/LICENSE
+The complete set of contributors may be found at http://adamjcook.github.io/fontawesome-elements/CONTRIBUTORS
+*/
+
+:host {
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-image: none;
+    padding: 7px;
+    margin: 2px;
+    vertical-align: middle;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+:host([disabled]) {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+:host(.outline) {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+:host(:hover:not([disabled])) {
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+:host(.selected:not([disabled])) {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+:host(:active:not([disabled]), .selected:active:not([disabled])) {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+:host(.core-dark-theme.outline) {
+    background-color: rgba(200, 200, 200, 0.05);
+    box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.1);
+}
+
+:host(.core-dark-theme:hover) {
+    background-color: rgba(200, 200, 200, 0.05);
+    box-shadow: 0 1px 0 0 rgba(200, 200, 200, 0.12), 0 0 0 1px rgba(200, 200, 200, 0.1);
+}
+
+:host(.core-dark-theme.selected) {
+    background-color: rgba(220, 220, 220, 0.05);
+    box-shadow: inset 0 1px 0 0 rgba(200, 200, 200, 0.05), 0 0 0 1px rgba(200, 200, 200, 0.12);
+}
+
+:host(.core-dark-theme:active, .core-dark-theme.selected:active) {
+    background-color: rgba(200, 200, 200, 0.05);
+    box-shadow: inset 0 1px 0 0 rgba(200, 200, 200, 0.1), 0 0 0 1px rgba(200, 200, 200, 0.12);
+}
+
+core-icon {
+    pointer-events: none;
+}

@@ -19,3 +19,30 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+###
+
+The fonts in the Font Awesome library are licensed under SIL OFL 1.1. See the following links for additional details:
+
+http://fontawesome.io/license/
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+
+The Font Awesome library attribution: Font Awesome by Dave Gandy - http://fontawesome.io.
+
+###
+
+The code in the Font Awesome library are licensed under The MIT License. See the following links for additional details:
+
+http://fontawesome.io/license/
+http://opensource.org/licenses/mit-license.html
+
+The Font Awesome library attribution: Font Awesome by Dave Gandy - http://fontawesome.io.
+
+###
+
+The project tooling is based heavily on the Polymer Team's `core-elements` package tooling and is licensed under the BSD-
+style license located at the following link:
+
+https://github.com/dart-lang/core-elements/blob/master/LICENSE
+
+
